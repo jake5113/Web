@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 기초문법</title>
+
+    <!-- 스타일 작성하는 영역 -->
+    <style>
+        /* 이 영역 안에서는 CSS 문법체계를 따름 */
+
+        /* 기본 문법 - 선택자{속성:값} */
+        
+        /* 1. 타입(요소) 선택자 */
+        h2{color: red;}
+        p{color: blue; font-family: serif;}
+        
+        /* 2. 전체 선택자 */
+        *{font-style: italic; color: blueviolet;}
+
+        /* 3. 아이디 선택자 */
+        #p1{color: gray;}
+
+        /* 4. 클래스 선택자 */
+        .aa{color: burlywood;}
+
+        /* 5. 선택자 그룹 */
+        li, a{color: brown;}
+
+        /* 6. 자식, 자손 선택자 */
+        #ss>p{color: teal;}
+        #ss p{color: lime;}
+
+        /* 아래 둘은 완전히 다름 */
+        p.aa{color: aliceblue;} /* p요소 중에서 클래스 속성 값이 aa 인 요소 */
+        p .aa{color: antiquewhite;} /* p요소의 자손들 중에서 클래스 속성 값이 aa 인 요소 */
+
+        /* 복합적으로 사용하는 선택자 */
+        #kk ul.gg>li{background-color: aqua;}
+
+        /* 7. 속성 선택자 */
+        p[class]{font-size: 30px;}
+
+        div[id="ss"]{font-weight: bold;}
+
+        /* 8. 의사 선택자 */
+        a:link{color: blue;}
+        a:visited{color: brown;}
+
+        a:hover{color: green;}
+        a:active{color: red;}
+
+        #kk ul li:first-child{color: blue;}
+        #kk ul li:nth-child(2){color: red;}
+        #kk ul li:last-child{color: cadetblue;}
+
+        /* 수식을 이용한 n번째 자식 요소 선택 */
+        /* n : 0,1,2,3,4,... 자동 */
+        table tr:nth-child(2n+1){background-color: antiquewhite;} 
+
+    </style>
+
+</head>
+<body>
+    
+    <h2 class="aa">CSS Selector Test</h2>
+
+    <p id="p1">Hello world</p>
+    <p class="aa">Nice to meet you</p>
+    <p>Nice to meet you</p>
+    <h1>zzz</h1>
+
+    <ul>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ul>
+
+    <a href="">NAVER</a>
+
+    <div id="ss">
+        <h4>Region</h4>
+        <p>Hello world</p>
+        <div>
+            <p>Apple</p>
+            <p>Orange</p>
+            <p>Banana</p>
+        </div>
+    </div>
+
+    <div id="kk">
+        <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+        <ul class="gg">
+            <li>xxx</li>
+            <li>yyy</li>
+            <li>zzz</li>
+        </ul>
+    </div>
+
+    <a href="https://www.google.com" >Google</a>
+
+    <table border="1">
+        <tr>
+            <td>aa</td>
+            <td>bb</td>
+            <td>cc</td>
+            <td>dd</td>
+        </tr>
+        <tr>
+            <td>aa</td>
+            <td>bb</td>
+            <td>cc</td>
+            <td>dd</td>
+        </tr>
+        <tr>
+            <td>aa</td>
+            <td>bb</td>
+            <td>cc</td>
+            <td>dd</td>
+        </tr>
+        <tr>
+            <td>aa</td>
+            <td>bb</td>
+            <td>cc</td>
+            <td>dd</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

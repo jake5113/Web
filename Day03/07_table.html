@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table style</title>
+
+    <style>
+        table{border: 2px solid; border-collapse: collapse; text-align: center;}
+        th, td{border: 1px solid rebeccapurple; padding: 10px 5px;}
+        
+        th{background-color: green; color: white;}
+        
+        tr:nth-child(2n+1){background-color: yellowgreen}
+
+        tr>:nth-child(1){width: 40%;}
+
+        th{border-bottom: double red;}
+
+        /* 직접 요소를 만들지 않았지만 테이블에 숨어 있는 요소가 존재함 */
+        table>:nth-child(1){border: 5px solid pink;}
+        table tr:nth-child(1){border: 5px solid pink;}
+
+
+    </style>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>이메일</th>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>chul@google.com</td>
+        </tr>
+        <tr>
+            <td>김영희</td>
+            <td>young@google.com</td>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>hong@google.com</td>
+        </tr>
+        <tr>
+            <td>쿠리코</td>
+            <td>쏯쏯쏯@google.com</td>
+        </tr>
+    </table>
+
+</body>
+</html>

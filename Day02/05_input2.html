@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Input type 2</title>
+</head>
+<body>
+    
+    <!-- 새로이 추가된 type 들 -->
+    <input type="date" name="" id=""><br>
+    <input type="datetime-local" name="" id=""><br>
+    <input type="month"><br>
+    <input type="time"><br>
+    <input type="week"><br>
+
+    <input type="color"><br>
+
+    <!-- 모바일에서 소프트 키보드의 모양을 결정함 -->
+    <input type="email" placeholder="email"><br>
+    <input type="tel" placeholder="tel"><br>
+    
+    <input type="search"><br>
+    
+    <input type="range" min="1" max="10" value="2" step="2"><br>
+    <input type="range" min="1" max="100" value="2" step="2"><br>
+    <input type="number" min="-2" max="10" value="-2" step="3"><br>
+    
+    <hr>
+
+    <!-- 새로이 추가된 속성들 -->
+
+    <form>
+        <!-- 힌트 -->
+        <input type="text" placeholder="나는 힌트"><br>
+
+        <!-- 반드시 입력해야 하는 요소 - 필수 입력란 만들때 -->
+        <input type="text" required><br>
+        <input type="submit" name="" id=""><br>
+
+        <!-- 읽기 전용 -->
+        <input type="text" readonly value="쏯쏯쏯쏯쏯쏯쏯"><br>
+
+        <!-- w자동 포커싱 페이지 로딩하면 자동 포커스 -->
+        <input type="text" autofocus><br>
+        
+        <!-- 글자ㅜㅅ 제한 -->
+        <input type="text" maxlength="5"><br>
+
+        <!-- 자동완성 기능  <datalist>요소와 함ㅁ께써야함-->
+        <input type="text" autocomplete list="datas"><br>
+        <datalist id="datas">
+            <option value="canada"></option>
+            <option value="korea"></option>
+            <option value="china"></option>
+            <option value="japan"></option>
+        </datalist>
+
+
+
+
+
+    </form>
+    
+
+    
+</body>
+</html>

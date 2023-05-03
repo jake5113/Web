@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델(요소크기 및 배경)</title>
+    <style>
+        p.aa {
+            /* 경계선 */
+            border-style: solid;
+            border-top-style: dashed;
+            border-bottom-style: dotted;
+
+            border-width: thick;
+            border-width: 3px;
+            border-bottom-width: 10px;
+
+            border-color: rebeccapurple;
+            border-right-color: aqua;
+
+            border-radius: 30px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 100px;
+
+            /* 경계선을 이미지가 보일정도의 두께로 설정 */
+            border: 30px solid transparent;
+            border-image-slice: 30 30;
+            /*높이 너비*/
+            border-image-repeat: round;
+
+            /* 경계선 이미지 */
+            border-image-source: url("./image/border.png");
+
+            /* 요소 크기 */
+            width: 70%;
+            height: 300px;
+
+            /*  요소의 콘텐츠가 아니라 요소자체를 가운데 정렬 */
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        /* 인라인 요소 - 너비지정 불가 */
+        a {
+            background-color: red;
+            width: 200px;
+        }
+
+        em {
+            background-color: aqua;
+            width: 100%;
+        }
+
+        /* 인라인-블럭 요소 - 너비지정 가능 */
+        img {
+            width: 500px;
+            border: 1px solid black;
+        }
+
+        input {
+            background-color: purple;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 경계선 border / 요소크기 / 가운데 정렬 -->
+    <p class="aa">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quos quia commodi corrupti nesciunt nostrum
+        veritatis ea accusantium maiores harum vero, accusamus consectetur? Asperiores et fugiat vitae? Delectus,
+        excepturi amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quos quia commodi corrupti nesciunt
+        nostrum veritatis ea accusantium maiores harum vero, accusamus consectetur? Asperiores et fugiat vitae?
+        Delectus, excepturi amet.
+    </p>
+
+    <!-- 인라인 요소의 크기 설정 및 가운데 정렬 -->
+
+    <!-- 인라인 요소는 너비조정 불가능 -->
+    <a href="">anchor</a>
+    <em>Hello</em>
+
+    <!-- 인라인(블럭) 요소는 너비조정 가능 -->
+    <img src="./image/image.png" alt="image">
+    <input type="text">
+
+    <!-- 마진 -->
+    <div id="m">
+        <p id="p1">p1</p>
+        <p id="p2">p2</p>
+    </div>
+
+    <style>
+        #p1 {
+            background-color: red;
+            margin: 0px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        #p2 {
+            background-color: green;
+            margin: 0px;
+            height: 50px;
+            margin-top: 10px;
+        }
+
+        /* 음수 마진을 주면 요소가 겹침 */
+        #p1 {
+            background-color: red;
+            margin: 0px;
+            height: 50px;
+        }
+
+        #p2 {
+            background-color: green;
+            margin: 0px;
+            height: 50px;
+            margin-top: -20px;
+            width: 50%;
+        }
+    </style>
+
+    <!-- 배경 이미지/색상 -->
+    <p class="back">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium harum aut eos officiis, rem dignissimos
+        quisquam aliquam reiciendis, maxime, illum omnis expedita. Repellat, rerum voluptates. Nostrum nobis voluptates
+        ullam quo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi nulla a accusantium molestiae ullam
+        error, maiores libero aut itaque tempora doloribus exercitationem saepe. Nobis consequuntur quis, harum quae
+        assumenda at!
+    </p>
+
+    <style>
+        p.back {
+            background-color: paleturquoise;
+            background-image: url(./image/image.png);
+            background-size: 200px 100px;
+
+            background-repeat: no-repeat;
+
+            background-position: center;
+            background-position: bottom right;
+        }
+    </style>
+
+    <!-- 배경 이미지가 붙어 있는 위치 설정 -->
+    <p id="attach">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nostrum officiis libero maiores culpa!
+        Dolor fugiat quas consectetur rerum ea a maiores, dolores temporibus quidem nulla eveniet ipsa incidunt
+        reprehenderit.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit vel reiciendis earum. In saepe molestiae aliquid
+        at consectetur odio quaerat eligendi doloremque? Quibusdam hic nostrum inventore explicabo iusto corrupti harum?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit vel reiciendis earum. In saepe molestiae aliquid
+        at consectetur odio quaerat eligendi doloremque? Quibusdam hic nostrum inventore explicabo iusto corrupti harum?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit vel reiciendis earum. In saepe molestiae aliquid
+        at consectetur odio quaerat eligendi doloremque? Quibusdam hic nostrum inventore explicabo iusto corrupti harum?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit vel reiciendis earum. In saepe molestiae aliquid
+        at consectetur odio quaerat eligendi doloremque? Quibusdam hic nostrum inventore explicabo iusto corrupti harum?
+    </p>
+
+    <style>
+        #attach{
+            width: 60%;
+            height: 300px;
+            border: 2px solid blue;
+            overflow: scroll;
+            margin: auto;
+
+            background-image: url("./image/image.png");
+            background-size: 200px 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            background-attachment: scroll; /*요소가 스크롤될때 배경도 같이 */
+            background-attachment: fixed; /*브라우저에 배경이 이미지가 붙어 있음. 단, 요소안에서만 보여짐*/
+            background-attachment: local; /*콘텐츠에 배경이 붙은 느낌*/
+        }
+    </style>
+
+
+</body>
+
+</html>

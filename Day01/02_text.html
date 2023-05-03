@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Element</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        이곳에 글씨를 쓰면 브라우저에 보입니다.
+        두번째 줄입니다.
+        띄어쓰기도..          어차피 하나로만 인식함
+        특수문자 : ~!@#$%^&*()_+=-`123456789<><>?":;'\/.,"
+        다만, 주의할 것은 5 < 10 ... 잘 나오지만 오류의 가능성이 있음
+        예를 들어 <abcd></abcd> 처럼 태그문으로 오해될 수 있음.
+        그래서 특문수자를 표시하는 특별한 문자표기법[엔티티 코드]이 존재함
+        [&#198;&nbsp;&nbsp;&nbsp;&nbsp;&copy;&yen;]
+
+        <!-- 한 단락을 만들어주는 요소 [단락사이에 마진이 기본 적용됨]-->
+        <p>단락요소는 자동으로 한줄을 차지함.</p>
+        <p>"두번째<br>단락이므로<br> 자동 <br>다음 줄"</p>
+        <!-- <br>태그처럼 종료태그가 없는 요소를 empty element 라고 부름 -->
+
+        <!-- 권장하지 않음. -->
+        <p>권장하지 않지만 종료태그가 없어도 에러 없음.
+        <p>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+        
+        <!-- 작성한 모습 그대로 보여주는 요소  -->
+        <pre>
+            이 안에 작성한 그대로 보임.
+            이렇게 줄바꿈 하면 그대로
+            
+            줄 바꿈 함.         ㅋㅋ
+            이게 좋다고 볼 수 없음. 글꼴도 이상하고 들여쓰기도 됨.
+        </pre>
+    
+        <!-- 제목글씨용 요소 -->
+        <h1>This id Heading Element</h1>
+        <h2>This id Heading Element</h2>
+        <h3>This id Heading Element</h3>
+        <h4>This id Heading Element</h4>
+        <h5>This id Heading Element</h5>
+        <h6>This id Heading Element</h6>
+        <!-- 존재하지 않는 태그는 무시함 -->
+        <h7>This id Heading Element</h7>
+        <h2>This id Heading Element</h1>
+        <h1>This id Heading Element</h2>
+        
+        <!-- 텍스트서식 요소 -->
+        <p>텍스트 서식 <strong>강하게</strong> 입니다.</p>
+        <p>텍스트 서식 <em>강하게</em> 입니다.</p>
+
+        <!-- 수평구분선 -->
+        <hr>
+
+        <p>아무글씨</p>
+        <p>텍스트 서식 <sub>아래첨자</sub>입니다.</p>
+
+
+
+    </body>
+</html>

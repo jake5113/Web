@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Text Element</title>
+    </head>
+    <body>
+
+        <!-- 리스트 요소 -->
+        <ul>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
+        </ul>
+
+        <ol>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
+        </ol>
+
+        <dl>
+            <dt>aaa</dt>
+            <dd>이것은 Definition Data 입니다.</dd>
+            <dt>커피</dt>
+            <dd>-5000원</dd>
+            <dt>차</dt>
+            <dd>-4000원</dd>
+        </dl>
+
+        <hr>
+
+        <!-- 하이퍼링크 anchor 요소-->
+        <a href="https://www.naver.com/">NAVER</a>
+        <br>
+        <a href="./02_ex.html" target="_blank">상대주소 : 다른 html 문서</a>
+        <br>
+        <a href="#help">도움말 위치로 이동</a>
+        <br>
+        <hr>
+        <h4 id="help">도움말</h4>
+
+        <!-- br 태그로 줄바꿈하는 대신에 단락요소안에 anchor 요소를 배치하는 방식이 선호됨  -->
+        <p><a href="">ㅋㅋㅋㅋㅋㅋㅋ</a></p>
+        <p><a href="">쏯쏯쏯쏯쏯쏯쏯쏯쏯</a></p>
+
+        <!-- 가장 많이 쓰임 -->
+        <ul>
+            <li><a href="">111</a></li>
+            <li><a href="">222</a></li>
+            <li><a href="">333</a></li>
+        </ul>
+
+        <!-- href에 이메일주소를 하이퍼링크 -->
+        <p><a href="mailto:jongwon5113@gmail.com">jongwon5113@gmail.com</a></p>
+
+        <!-- 이미지 보기 -->
+        <p><a href="https://cdn.pixabay.com/photo/2023/04/17/10/31/tennis-7932067_960_720.jpg">이미지보기</a></p>
+        <p><a href="./seolak.jpg" target="_blank">내 폴더의 이미지 보기</a></p>
+
+        <!-- 다운로드 링크 : 브라우저가 보여줄 수 없는 파일형식은 다운로드 됨 -->
+        <p><a href="http://mrhi2023.dothome.co.kr/aaa.zip">압축문서 다운로드</a></p>
+
+        <hr>
+
+        <!-- 이미지 요소 : empty element-->
+        <img src="./seolak.jpg" alt="설악산">
+        <img src="./seolak.jpg" alt="설악산" width="200" height="">
+        <p><img src="http://jake5113.dothome.co.kr/newyork.jpg" alt="뉴욕" width="50%"></p>
+        <img src="./aaa" alt="이미지가 없을때 보여질 글씨">
+
+        <!-- img + a -->
+        <a href="./seolak.jpg" target="_blank"><img src="./seolak.jpg" alt="설악" width="100"></a>
+
+        <!-- p.43 예제  -->
+        <!-- p.45 예제  -->
+
+
+    </body>
+</html>

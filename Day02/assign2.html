@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>카드 정보 입력</title>
+    <style>
+      /* 전체 폰트 설정 */
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 16px;
+      }
+        /* 제목 스타일 */
+  legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  /* 카드 정보 입력 박스 스타일 */
+  fieldset {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+  }
+
+  /* 레이블 스타일 */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    
+  }
+
+  label input[type="radio"] {
+  margin-right: 5px;
+}
+
+  /* 입력 필드 스타일 */
+  input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  /* 버튼 스타일 */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+
+  /* 줄 스타일 */
+  hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 32px 0;
+  }
+
+</style>
+</head>
+<body>
+  <fieldset>
+    <legend>카드 정보 입력</legend>
+    
+      <fieldset>
+        <legend>카드 타입</legend>
+        <label><input type="radio" name="card-type" value="visa">1. Visa</label>
+        <label><input type="radio" name="card-type" value="amex">2. American Express</label>
+        <label><input type="radio" name="card-type" value="mastercard">3. Mastercard</label>
+      </fieldset>
+    <label for="card-number">2. 카드 번호:</label>
+    <input type="text" id="card-number" name="card-number" required>
+  
+    <label for="crc-number">3. CRC 번호:</label>
+    <input type="text" id="crc-number" name="crc-number" required>
+  
+    <label for="card-holder-name">4. 카드 소유자 이름 (카드 상의 이름):</label>
+    <input type="text" id="card-holder-name" name="card-holder-name" placeholder="카드 상의 이름" required>
+  </fieldset>
+  
+  <hr>
+  
+  <button type="submit">구매</button>
+</body>
+</html>

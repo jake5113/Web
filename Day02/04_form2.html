@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form element 2</title>
+
+</head>
+
+<body>
+
+    <!-- 파일 전송 -->
+    <form action="./file.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="aaa" accept="image/png">
+        <input type="submit" value="전송">
+    </form>
+
+    <hr>
+
+    <!-- 여러개의 파일 전송 -->
+    <form action="./file2.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="bbb[]" multiple>
+        <input type="image" src="./image/kpj003.png" width="100">
+    </form>
+
+</body>
+
+</html>

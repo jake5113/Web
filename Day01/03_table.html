@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table element</title>
+</head>
+
+<body>
+    <table border="10">
+        <tr>
+            <th>no</th>
+            <th>name</th>
+            <th>message</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>sam</td>
+            <td>Hello world</td>
+        </tr>
+        <!-- 각 행(row)의 데이터(셀) 개수가 다를 수 있음. -->
+        <tr>
+            <td>2</td>
+            <td>robin</td>
+            <td>Nice to meet you</td>
+            <td>2023-04-27</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- 셀병합 -->
+    <table border="1">
+        <!-- 한줄만 있으면 비교할 셀이 없기에 span 영향이 안느껴짐 -->
+        <tr>
+            <td rowspan="2">111</td>
+            <td colspan="3" align="center">222</td>
+            <td>333</td>
+        </tr>
+        <tr>
+            <td>444</td>
+            <td>555</td>
+            <td>------666------</td>
+            <td>777</td>
+        </tr>
+
+        <!-- 테이블의 제목 -->
+        <caption>테이블 제목</caption>
+    </table>
+
+    <hr>
+
+    <!-- 테이블 셀영역 (<td></td>)안에 다른 요소(element) 넣기 -->
+    <table border="1" width="50%">
+        <tr>
+            <td width="30%">
+                <a href="https://naver.com" target="_blank">NAVER</a>
+            </td>
+            <td colspan="2">
+                <ul>
+                    <li>aaa</li>
+                    <li>bbb</li>
+                    <li>ccc</li>
+                </ul>
+            </td>
+        </tr>
+        <td colspan="2">
+            <p>테이블 안에는 어떤 요소든 배치 가능</p>
+        </td>
+        <td>
+            <img src="./img/hubble.jpg" alt="" width="100%">
+        </td>
+    </table>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Font & Text</title>
+    <style>
+
+        /* 폰트 글꼴 지정 */
+        p{font-family: Arial, Helvetica, sans-serif;}
+        p{font-family: monospace;}
+
+        /* 모든 컴퓨터에서 동일한 폰트로 보여지려면 */
+        /* 웹폰트 사용 : 개발자의 커스텀 */
+        @font-face {
+            font-family: "MyFont";
+            src: url(./font/dalseo.ttf);
+        }
+
+        p{font-family: "MyFont", sans-serif;}
+
+        /* 폰트크기 */
+        p{font-size: small;} /*키워드로 적용*/
+        p{font-size: 16px;} /*수치단위 px*/
+        p{font-size: 1.5em;} /*비율을 이용한 사이즈 1.5배(권장)*/
+        
+        /* bold, normal */
+        p{font-weight: bold;}
+
+        /* italic, normal */
+        p{font-style: italic;}
+
+        /* 폰트속성 4개를 한번에 축약형으로 설정 */
+        /* 순서[weight/style] size family */
+        p{font: bold italic 200% "MyFont", "휴먼옛체", serif;}    
+
+        /* 텍스트에 관련된 속성들 */
+
+        /* 텍스트 정렬 */
+        p{text-align: right;}
+        p{text-align: center;}
+        p{text-align: justify;}
+
+        /* 텍스트 변환[대소문자 변환] */
+        p{text-transform: uppercase;}
+        p{text-transform: lowercase;}
+        p{text-transform: none;}
+        p{text-transform: capitalize;}
+
+        /* 텍스트 선긋기 */
+        p{text-decoration: overline;}
+        p{text-decoration: underline;}
+        p{text-decoration: line-through;}
+        p{text-decoration: none;}
+
+        /* 텍스트 그림자 */
+        p{text-shadow: 5px 3px 10px rebeccapurple;}
+
+        /* 워드 랩 */
+        p.aaa{
+            border: 1px solid blue;
+            width: 5em;
+            word-wrap: break-word;
+        }
+        
+        #bbb{
+            column-count: 2;
+            column-gap: 80px;
+            column-rule: 4px dashed;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <p>Hello world</p>
+    <p>한글은 어떠한가</p>
+
+    <p class="aaa">
+        한글은 전혀 문제 없이 자동으로 워드 랩 됨.
+        hello nice to meet you synchronized
+        zzzzzzzzzzzzzzzzzzzzz
+    </p>
+
+    <!-- 다중 컬럼 -->
+    <p id="bbb">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam odit omnis voluptate soluta, inventore laudantium a laboriosam, dicta nostrum deserunt voluptatem! Temporibus accusantium quasi accusamus veniam explicabo enim dolorem assumenda!
+    </p>
+
+    <!-- 텍스트 정렬할때 인라인 요소와 블럭요소의 차이 -->
+    <!-- text-align 은 블럭요소에서만 의미가 있음 -->
+
+    <div style="text-align: center; background-color: beige; height: 5em;">Hello</div>
+    <span style="text-align: center; background-color: aquamarine; line-height: 5em;">Hello</span>
+
+</body>
+</html>

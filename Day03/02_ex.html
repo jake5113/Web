@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 작성 위치</title>
+
+    <!-- 스타일을 적용하는 3가지 방법 -->
+    <!-- 1. 외부 스타일 시트 -->
+    <!-- 2. 내부 스타일 시트 -->
+    <!-- 3. 인라인 스타일 시트 -->
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="./02_ex.css">
+
+    <!-- 내부 스타일 시트는 가급적 <head> 안에서 작성 -->
+    <style>
+        p {
+            color: red;
+            font-family: serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 인라인 스타일 : 요소안에 style 속성으로 스타일링 -->
+    <p style="color: chartreuse;">Hello world</p>
+
+    <!-- 내부 스타일시트는 문서 어디서든 작성 가능함 -->
+    <style>
+        p {
+            color: blue;
+        }
+    </style>
+
+</body>
+
+</html>
