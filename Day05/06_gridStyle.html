@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid css style</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>
+        <div id="item4">4</div>
+        <div id="item5">5</div>
+        <div id="item6">6</div>
+        <div id="item7">7</div>
+    </div>
+
+    <style>
+
+        *{border: 1px dotted red;}
+
+        .container{
+            /* 자식요소의 배치를 격자로 배치하기 용이한 스타일 */
+            display: grid;
+
+            /* 자식요소들을 한줄에 3칸씩 배치해보기 */
+            grid-template-columns: 100px 100px 150px;
+
+            /* 자식요소의 너비를 균등히 하고 싶다면? */
+            grid-template-columns: auto auto auto;
+
+            /* 높이도 지정가능 */
+            grid-template-rows: 150px 70px;
+
+            /* 각 셀들의 사이 간격지정 */
+            column-gap: 1rem;
+            row-gap: .5rem;
+
+            gap: .7rem 1rem; /* row-gap col-gap */
+        }
+
+        .container div{
+            background-color: aqua;
+            margin: 4px;
+            text-align: center;
+            padding: 8px;
+        }
+
+        /* 개별 셀들의 위치 및 병합 */
+        #item1{
+            grid-column-start: 1;
+            grid-column-end: 3; /* 3번 전까지 */
+            /* 1~2번 칸 */
+        }
+
+        #item2{
+            grid-column-start: 2;
+            grid-column-end: 4; /* 3번 전까지 */
+        }
+        #item3{
+            grid-row-start: 2;
+            grid-row-end: 4; /* 3번 전까지 */
+        }
+
+        #item5{
+            grid-column: 3 / span 2;
+        }
+
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Media query</title>
+
+    <!-- 미디어 쿼리 : 반응형 웹을 위한 css의 선택적용 기법 -->
+
+    <!-- 방법1. @media 키워드 사용 -->
+    <style>
+
+        #aa{
+            width: 320px;
+            height: 100px;
+            background-color: green;
+        }
+
+        /* 너비가 560px 이상인 환경 */
+        @media (min-width: 560px) {
+            #aa{
+                width: 560px;
+                height: 200px;
+                background-color: yellow;
+            }
+        }
+
+    </style>
+    
+    <!-- 방법2. media 속성 이용 -->
+    <!-- 외부스타일 시트 -->
+    <link media="(min-width:680px) and (max-width:800px)" rel="stylesheet" href="./01_mediaquery.css">
+
+    <!-- 내부스타일 시트 -->
+    <style media="screen and (min-width: 800px)">
+        #aa{
+            width: 800px;
+            height: 300px;
+            background-color: brown;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="aa"></div>
+</body>
+
+</html>

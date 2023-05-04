@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grid Layout</title>
+    <style>
+        /* Grid style 로 레이아웃 구성 */
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto 300px auto;
+        }
+
+        .container .aa {
+            background-color: aqua;
+            text-align: center;
+            padding: 20px 0px;
+            font-size: 30px;
+            border: 1px solid black;
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 6;
+        }
+        
+        section.main {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+        
+        footer{
+            grid-column: 1 /span 5;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="aa">Header</header>
+        <nav class="aa">Menu</nav>
+        <section class="aa main">Content</section>
+        <aside class="aa">Login</aside>
+        <footer class="aa">Footer</footer>
+    </div>
+</body>
+
+</html>
