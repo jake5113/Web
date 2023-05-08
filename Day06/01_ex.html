@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test</title>
+
+    <!-- 브라우저가 interprete (통역)해서 실행하는 프로그래밍 코드 작성 -->
+    <!-- 내부 스크립트 -->
+    <script>
+        // 이 <script> 영역 안에서는 JavaScript의 문법체계를 따름
+
+        // HTML 에서 body 안에 했던 모든 작업을 스크립트로 처리 가능
+        // 화면에 출력            
+        document.write("Hello world!!");
+
+        // 자동 줄바꿈 되지 않음.
+        document.write('자동 줄바꿈 안됨. 하려면 .. <br> 태그 이용');
+
+        // HTML의 태그문을 직접 작성할 수도 있음.
+        document.write('<hr>');
+        document.write("<a href=''>Google</a>");
+
+        document.write('<hr>');
+
+        // JS는 프로크래밍 언어이기에..
+        // 변수, 객체, 연산자, 제어문 등이 가능함
+        var a = 10;
+        document.write(a + "<br>");
+
+        var b = new Date();
+        document.write(b + "<br>");
+
+        // 이벤트에 의해 자동 발동하는 함수 정의
+        function aaa(){
+            // alert('clicked');
+
+            // body 영역이 모두 그려진 후에 document.write()하면 화면이 새로 갱신됨
+            document.write("clicked");
+        }
+
+        // 문장의 끝을 나타내는 ; 은 생략해도 됨
+        document.write('<hr>')
+        document.write('<안녕하세요>')
+        
+    </script>
+
+    <!-- 외부 스크립트 -->
+    <script src="./01_ex.js"></script>
+
+</head>
+
+<body>
+
+    <!-- JS와 함께 HTML 요소가 존재해도 됨 -->
+    <H2>Hello JavaScript</H2>
+
+    <!-- JS의 존재 이유는 요소의 이벤트 처리 -->
+    <Button onclick="aaa()">zzz</Button>
+
+</body>
+
+</html>

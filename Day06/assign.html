@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+        var input = prompt("100 미만의 정수만 입력:")
+        if(input >= 100){
+            alert(input + "은 100 보다 작지 않습니다.1")
+        }
+
+        var sum = 0
+        for (let index = 0; index < 101; index++) {
+            sum += index
+        }
+        alert(sum)
+
+        var sun = ["수성","금성","지구","화성","목성","토성","천왕성", "해왕성"]
+        for (var key in sun) {
+            alert(sun[key])
+        }
+
+        function process(bool){
+            if(bool){
+                alert("좋습니다. 게임시작")
+            } else{
+                alert("오키 나중에")
+            }
+        }
+
+        process(confirm("게임 한판 ㄱ?"))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
