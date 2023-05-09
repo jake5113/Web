@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assign1</title>
+    <script>
+
+        var name = "string"
+
+
+        function strCap(name) {
+            var first = name[0].toUpperCase()
+            for (let i = 1; i < name.length; i++) {
+                first = first.concat(name[i])
+            }
+            document.write(first + "<br>")
+        }
+
+        strCap("hong")
+        strCap("Hong")
+        strCap("jan")
+
+    </script>
+
+    <script>
+        var arr = ["사과", "오렌지", "귤", "당근", "케일"]
+        var rndm = Math.random() * arr.length
+
+        // alert(arr[Math.floor(rndm)])
+    </script>
+
+    <script>
+        var movies = ["터미네이터", "트랜스포머"]
+        movies.push("맨오브스틸")
+        movies.splice(-2, 1, "스파이더맨")
+        document.write(movies + "<br>")
+        // alert(movies[movies.length-1])
+        
+    </script>
+
+<script>
+    function check(ss) {
+        return ss.match(/XXX/ig) =="XXX"
+    }
+    document.write(check("buy XXX now") + "<br>")
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

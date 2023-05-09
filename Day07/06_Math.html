@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Math object</title>
+
+    <script>
+
+        // 4. Math
+
+        // 별도의 new 없이 클래스명으로 그냥 메소드 사용
+
+        var n = 3.14
+        document.write(Math.floor(n) + "<br>") // 플로어 - 소수점 제거
+        document.write(Math.round(n) + "<br>") // 반올림
+        document.write(Math.ceil(n) + "<br>")  // 올림
+
+        // 랜덤값
+        var r = Math.random() //0.0 ~ 1.0
+        document.write(r + "<br>")  
+
+        // 0~9 사이를 얻고 싶다면.
+        var r = Math.floor(Math.random() * 10)
+        document.write(r + "<br>")  
+
+        // 5~15
+        var r = (Math.random() * 11 + 5).toFixed()
+        document.write(r + "<br>")  
+        document.write(typeof(r) + "<br>")  // string
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
