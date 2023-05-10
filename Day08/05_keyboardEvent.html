@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Keyboard Event</title>
+
+    <script>
+        function keypress(){
+            // 키보드 이벤트는 window 객체 안에 event 관리 객체가 정보를 가지고 있음
+            var code = window.event.keyCode
+
+
+            document.getElementById("in1").value = code
+            document.getElementById("in2").value = String.fromCharCode(code)
+        }
+    </script>
+</head>
+<body onkeypress="keypress()">
+    <input type="text" name="" id="in1">
+    <input type="text" name="" id="in2">
+</body>
+</html>

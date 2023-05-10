@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="hh">글 변경</h3>
+    <button onclick="kk()">ㅁㄴ</button>
+    <script>
+        function kk(){
+            document.getElementById("hh").innerHTML = "ddd"
+        }
+    </script>
+    <input type="text" id="ip">
+
+    <button onclick="check1()">clear</button>
+    <script>
+        function check1(){
+            var s = document.getElementById("ip")
+            var regExp = /^[0-9]+$/
+
+            if(regExp.test(s.value)) alert("숫자")
+            else alert("숫자 아님")
+        }
+    </script>
+</body>
+</html>
