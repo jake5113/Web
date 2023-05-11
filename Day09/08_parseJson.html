@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS JSON parse</title>
+</head>
+
+<body>
+    <button onclick="aaa()">jsonObject</button>
+    <button onclick="bbb()">jsonArray</button>
+    <h3 id="hh"></h3>
+    <script>
+        // JSON --> JS 의 객체로 변환
+        var s = '{"name" : "sam", "age":20}'
+
+        function aaa() {
+            var person = JSON.parse(s)
+
+            document.getElementById("hh").innerHTML = person.name
+        }
+
+        // JSON Array --> JS 객체 배열로
+
+        var ss = '[{"name" : "sam", "age":20},{"name" : "robin", "age":25}]'
+        function bbb() {
+            var people = JSON.parse(ss)
+            var a = ""
+            for (let i = 0; i < people.length; i++) {
+                a += people[i].name + ", " + people[i].age + "<br>";
+            }
+            document.getElementById("hh").innerHTML = a
+        }
+    </script>
+
+    <hr>
+
+    <!-- JS 객체를 JSON 문자열형식으로 변환 -->
+    <button onclick="ccc()">object to json</button>
+    <button onclick="ddd()">object array to json array</button>
+    <h3 id="pp"></h3>
+
+    <script>
+        var person = {
+            name: "sam",
+            age: 20
+        }
+
+        function ccc() {
+            var json = JSON.stringify(person)
+            document.getElementById('pp').innerHTML = json
+        }
+
+        var objArray = [
+            {
+                name: "sam",
+                age: 20
+            }, {
+                name: "sam",
+                age: 20
+            }, {
+                name: "sam",
+                age: 20
+            }, {
+                name: "sam",
+                age: 20
+            }
+        ]
+
+
+        function ddd() {
+            var json = JSON.stringify(objArray)
+            document.querySelector("#pp").innerHTML = json
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS HTTP 통신 라이브러리</title>
+</head>
+
+<body>
+    <button onclick="aaa()">get method test</button>
+    <button onclick="bbb()">post method test</button>
+
+    <hr>
+    <div id="target"></div>
+
+    <script>
+        function aaa() {
+            //GET 방식 연습
+            var url = "./getTest.php?name=Jisoo&msg=BlackPink"
+
+            // fetch 라이브러리 - promise
+            fetch(url).then(function(response){ // 응답객체 :response
+                // 응답객체가 가지고 온 응답결과를 글씨로 변환요청
+                return response.text()
+            }).then(function(responseText){
+                document.querySelector("#target").innerHTML = responseText
+            })
+        }
+        
+        function bbb() {
+            //POST 방식 연습
+            
+            var url = "./postTest.php"
+            var date = "title=Hello&msg=Nice to meet you"
+            
+            fetch(url, {
+                method:'POST',
+                headers:{'Content-Type':'application/x-www-form-urlencoded; charset=utf-8'},
+                body:data
+            }).then(function(response){ // 응답객체 :response
+                // 응답객체가 가지고 온 응답결과를 글씨로 변환요청
+                return response.text()
+            }).then(function(responseText){
+                document.querySelector("#target").innerHTML = responseText
+            })
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS canvas</title>
+
+    <script>
+        function loaded(){
+            var canvas = document.getElementById('canvas1')
+            
+            // 그림도구 객체 얻어오기
+            var context = canvas.getContext("2d");
+
+            // 글씨 스타일 지정
+            context.fillStyle = "red"
+            context.font = "20px serif"
+            
+            // 그림도구를 이용하여 글씨 그려보기
+            context.fillText("Hello",20,20) // 글씨의 좌하단 좌표
+            context.fillText("Hello1",0,0)
+            context.fillText("Hello2",0,400)
+            
+            // 글씨를 윤곽선 그리기
+            context.strokeStyle = "blue"
+            context.strokeText("Hello", 100, 40)
+            
+            // 사각형 그리기
+            context.fillStyle = "yellowgreen"
+            context.fillRect(10,50,100,100) // 좌상단:10,50 너비: 100, 높이 100
+
+            context.strokeStyle = "green"
+            context.strokeRect(120,50,100,100)
+
+            // 직선 그리기
+
+            context.beginPath(10,100) 
+            context.moveTo(10, 100) // 시작
+            context.lineTo(100, 150) // 시작
+            context.lineTo(150, 120) // 시작
+
+            context.stroke()
+
+
+        }
+    </script>
+
+</head>
+<body onload="loaded()">
+    <!-- 도화지 객체 -->
+    <canvas id="canvas1" width="300" height="400" style="border: 1px solid black;"></canvas>
+</body>
+</html>
