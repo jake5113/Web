@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DragDrop</title>
+    <style>
+        #cart{
+            width: 400px;
+            height: 150px;
+            border: 1px dotted red;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        
+        var id;
+        var isOverCart = false
+
+        function startDrag(){
+            // 드래그가 되는 요소의 식별 id 값을 변수에 저장
+            id = event.target.id
+        }
+
+        function overDrag(){
+            // 요소 위에 다른 요소가 놓여질 수 없도록 되어 있는 디폴트 값을 방지하도록 하여 드롭을 허용기키기
+            event.preventDefault()
+            isOverCart = true
+        }
+
+        function leaveDrag(){
+            isOverCart = false
+        }
+
+        function endDrag(){
+
+            if(isOverCart){
+                // 처음 드래그 시작될 때 저장했던 id를 이용하여 요소 찾기
+                var e = document.getElementById(id)
+                document.getElementById('cart').appendChild(e)
+
+                isOverCart = false
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="cart" ondragover="overDrag()" ondragleave="leaveDrag()"></div>
+    <img src="./image/computer.png" alt="computer" width="150" height="150" id="img1" ondragstart="startDrag()" ondragend="endDrag()">
+    <img src="./image/notebook.png" alt="computer" width="150" height="150" id="img2" ondragstart="startDrag()" ondragend="endDrag()">
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Web Worker</title>
+    <script>
+        function aaa() {
+            var n = 0
+            while (true) {
+                n++
+                document.getElementById("hh").innerHTML = n
+            }
+        }
+
+        var w
+        function bbb() {
+            if (w == undefined) {
+                w = new Worker("worker.js") // 워커객체를 만들면 자동 start
+
+                // 워커가 포스트로 보낸 메세지 받기
+                w.onmessage = function(event){
+                    document.getElementById("hh").innerHTML = event.data
+                }
+
+            }else {
+                alert('이미 워커가 있어요')
+            }
+        }
+
+        function ccc() {
+            w.terminate()
+            w = undefined
+        }
+
+        // 메인스레드도 워커에게 메시지 전달 가능
+        
+
+    </script>
+</head>
+
+<body>
+    <!-- 워커(스레드)를 사용하지 않았을때 문제 확인 -->
+    <button onclick="aaa()">무한반복문</button>
+    <h2 id="hh"></h2>
+    <hr>
+    <button onclick="alert('clicked')">버튼</button>
+    <hr>
+    <button onclick="bbb()">start worker (스레드)</button>
+    <button onclick="ccc()">stop worker (스레드)</button>
+
+</body>
+
+</html>

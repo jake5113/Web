@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS GeoLocation</title>
+
+    <script>
+        function aaa() {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var latitude = position.coords.latitude
+                var longitude = position.coords.longitude
+
+                document.getElementById("hh").innerHTML = latitude + ", " + longitude
+            })
+        }
+
+        function bbb() {
+            id = navigator.geolocation.watchPosition(function (position) { 
+                var lat= position.coords.latitude
+                var lng = position.coords.longitude
+                document.querySelector('#hh').innerHTML = `${lat}, ${lng}` // JS의 탬플릿 문자열 ``(빽틱)안에서 ${} 로 변수명 구분
+            })
+        }
+
+        function ccc(){
+            navigator.geolocation.clearWatch(id)
+        }
+        
+    </script>
+
+</head>
+
+<body>
+    <button onclick="aaa()">my location</button>
+    <h2 id="hh">location</h2>
+    <button onclick="bbb()">mm</button>
+    <button onclick="ccc()">bb</button>
+</body>
+
+</html>
